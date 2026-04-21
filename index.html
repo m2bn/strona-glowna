@@ -2,23 +2,65 @@
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
-    <title>FICSIT Data Center v2</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ficsit DataCenter | Profesjonalny Hosting SaaS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
-        body { background: #0b0e14; color: #e6e6e6; font-family: 'Segoe UI', sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; overflow: hidden; }
-        .card { border-left: 5px solid #f2a900; background: #161b22; padding: 40px; border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); text-align: center; position: relative; }
-        h1 { color: #f2a900; margin: 0; font-size: 2.5em; text-transform: uppercase; letter-spacing: 2px; }
-        p { color: #8b949e; font-size: 1.1em; margin: 10px 0; }
-        .status { display: inline-block; padding: 5px 15px; background: #238636; color: white; border-radius: 20px; font-size: 0.8em; margin-top: 20px; font-weight: bold; }
-        .cpu-info { font-family: monospace; color: #58a6ff; margin-top: 15px; font-size: 0.9em; }
+        body { font-family: 'Inter', sans-serif; background-color: #030712; }
+        .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.05); }
+        .gradient-text { background: linear-gradient(90deg, #60a5fa, #a855f7); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
     </style>
 </head>
-<body>
-    <div class="card">
-        <h1>FICSIT Data Center v1.0</h1>
-        <p>Infrastruktura oparta na procesorze Intel Pentium J5005</p>
-        <p>Node: <b>pve01-lxc-100</b></p>
-        <div class="cpu-info">Core Frequency: 2.80GHz | 8GB RAM LPDDR4</div>
-        <div class="status">SYSTEM ONLINE</div>
-    </div>
+<body class="text-gray-300">
+    <nav class="p-6 flex justify-between items-center max-w-7xl mx-auto">
+        <div class="text-2xl font-bold text-white tracking-tighter">FICSIT<span class="text-blue-500">.PL</span></div>
+        <div class="space-x-8 hidden md:flex">
+            <a href="#" class="hover:text-white transition">Infrastruktura</a>
+            <a href="#" class="hover:text-white transition">Cennik</a>
+            <a href="https://panel.ficsit.pl" class="glass px-5 py-2 rounded-full text-white hover:bg-white/10 transition">Panel Klienta</a>
+        </div>
+    </nav>
+
+    <header class="max-w-7xl mx-auto px-6 pt-20 pb-32 text-center">
+        <h1 class="text-5xl md:text-7xl font-extrabold text-white mb-6 tracking-tight">
+            Twoja brama do <br><span class="gradient-text">Cyfrowej Wydajności</span>
+        </h1>
+        <p class="text-xl text-gray-400 max-w-2xl mx-auto mb-10">
+            Niezawodny hosting SaaS oparty na architekturze NVMe. Bezpieczeństwo klasy enterprise dla Twoich projektów.
+        </p>
+        <div class="flex flex-col md:flex-row justify-center gap-4">
+            <button class="bg-blue-600 hover:bg-blue-500 text-white px-8 py-4 rounded-xl font-semibold transition shadow-lg shadow-blue-900/20">
+                Rozpocznij teraz
+            </button>
+            <button class="glass text-white px-8 py-4 rounded-xl font-semibold hover:bg-white/5 transition">
+                Zobacz infrastrukturę
+            </button>
+        </div>
+    </header>
+
+    <section class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-8 pb-40">
+        <div class="glass p-8 rounded-3xl">
+            <div class="w-12 h-12 bg-blue-600/20 rounded-lg flex items-center justify-center mb-6">
+                <svg class="w-6 h-6 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-3">Ultra Niskie Opóźnienia</h3>
+            <p class="text-gray-400 text-sm">Nasze węzły w centrum Europy gwarantują najniższy ping dla Twoich aplikacji i graczy.</p>
+        </div>
+        <div class="glass p-8 rounded-3xl">
+            <div class="w-12 h-12 bg-purple-600/20 rounded-lg flex items-center justify-center mb-6">
+                <svg class="w-6 h-6 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-3">Totalne Bezpieczeństwo</h3>
+            <p class="text-gray-400 text-sm">Zaawansowana ochrona anty-DDoS i codzienne kopie zapasowe w standardzie.</p>
+        </div>
+        <div class="glass p-8 rounded-3xl">
+            <div class="w-12 h-12 bg-emerald-600/20 rounded-lg flex items-center justify-center mb-6">
+                <svg class="w-6 h-6 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"></path></svg>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-3">Skalowalność SaaS</h3>
+            <p class="text-gray-400 text-sm">Rozwijaj swój biznes bez obaw o limity. Zwiększaj zasoby jednym kliknięciem w panelu.</p>
+        </div>
+    </section>
 </body>
 </html>
